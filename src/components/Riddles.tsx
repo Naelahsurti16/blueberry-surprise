@@ -8,8 +8,8 @@ const RIDDLES = [
     a: "blueberry",
   },
   {
-    q: "Our first hello, the spark, the start — what's the place or app where you stole my heart?",
-    a: "",
+    q: "Popcorn, big screens, your hand holding mine — what's our favourite date, every single time?",
+    a: "movie",
   },
   {
     q: "Number of years you'll be turning soon, dancing with me under the moon?",
