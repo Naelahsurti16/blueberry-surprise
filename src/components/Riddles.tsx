@@ -8,8 +8,8 @@ const RIDDLES = [
     a: "blueberry",
   },
   {
-    q: "I'm short, I'm cute, you call me with glee — a teasing pet name starts with 'Ch', what could it be?",
-    a: "chotu",
+    q: "Our first hello, the spark, the start — what's the place or app where you stole my heart?",
+    a: "",
   },
   {
     q: "Number of years you'll be turning soon, dancing with me under the moon?",

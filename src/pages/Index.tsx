@@ -29,12 +29,12 @@ const Index = () => {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blueberry/20 border border-blueberry/40 text-xs uppercase tracking-widest text-blueberry-light mb-6">
               <Lock className="w-3 h-3" /> Locked until May 13
             </div>
-            <h1 className="font-[Pacifico] text-5xl sm:text-7xl text-gradient-blueberry mb-4">
+            <h1 className="font-[Pacifico] text-4xl sm:text-6xl md:text-7xl text-gradient-blueberry mb-4 leading-[1.2] pb-2 px-2">
               Hey Blueberry 💙
             </h1>
             <p className="text-lg text-muted-foreground">
               Something sweet is waiting for you. Just <span className="text-accent font-semibold">{days + 1} sleeps</span> to go,
-              my Chotu — try to be patient (I know you can't 😏).
+              my baby try to be patient (I know you can't 😏).
             </p>
           </div>
 
@@ -43,7 +43,7 @@ const Index = () => {
           </div>
 
           <div className="w-full animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            <h2 className="text-center font-[Pacifico] text-2xl text-gradient-blueberry mb-6">
+            <h2 className="text-center font-[Pacifico] text-2xl sm:text-3xl text-gradient-blueberry mb-6 leading-[1.3] pb-2 px-2">
               While you wait... solve these 💙
             </h2>
             <Riddles />
