@@ -4,11 +4,11 @@ import { Lock, Sparkles as SparkIcon } from "lucide-react";
 
 const RIDDLES = [
   {
-    q: "I'm tiny, I'm round, I'm sweet and I'm blue — your nickname my love, who am I to you?",
+    q: "I'm tiny, I'm round, I'm sweet and I'm blue, your nickname my love, who am I to you?",
     a: "blueberry",
   },
   {
-    q: "Popcorn, big screens, your hand holding mine — what's our favourite date, every single time?",
+    q: "Popcorn, big screens, your hand holding mine, what's our favourite date, every single time?",
     a: "movie",
   },
   {
@@ -55,7 +55,7 @@ export const Riddles = () => {
               <>
                 <p className="text-sm text-foreground/90 italic mb-3">"{r.q}"</p>
                 {isSolved ? (
-                  <p className="text-accent font-semibold">✨ {r.a} — you got it!</p>
+                  <p className="text-accent font-semibold">✨ {r.a}, you got it!</p>
                 ) : (
                   <div onClick={(e) => e.stopPropagation()}>
                     <input

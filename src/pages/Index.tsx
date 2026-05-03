@@ -29,7 +29,7 @@ const Index = () => {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blueberry/20 border border-blueberry/40 text-xs uppercase tracking-widest text-blueberry-light mb-6">
               <Lock className="w-3 h-3" /> Locked until May 13
             </div>
-            <h1 className="font-[Pacifico] text-4xl sm:text-6xl md:text-7xl text-gradient-blueberry mb-4 leading-[1.2] pb-2 px-2">
+            <h1 className="font-[Pacifico] text-4xl sm:text-6xl md:text-7xl text-gradient-blueberry mb-4 leading-[1.4] pb-4 px-2 overflow-visible">
               Hey Blueberry 💙
             </h1>
             <p className="text-lg text-muted-foreground">
