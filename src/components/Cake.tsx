@@ -97,31 +97,70 @@ export const Cake = ({ onBlown }: Props) => {
   return (
     <div className="flex flex-col items-center gap-6">
       <div
-        className="relative cursor-pointer select-none animate-float-soft"
+        className="relative cursor-pointer select-none animate-float-soft pt-16"
         onClick={() => listening && blowOut()}
       >
-        {/* Candles */}
-        <div className="flex gap-3 sm:gap-4 justify-center mb-2 relative z-10">
+        {/* Glow halo behind cake */}
+        <div className="absolute inset-0 -z-10 glow-orb opacity-60 blur-2xl" />
+
+        {/* Candles row — sit ON the top tier */}
+        <div className="flex gap-4 sm:gap-5 justify-center mb-[-6px] relative z-20">
           {Array.from({ length: NUM_CANDLES }).map((_, i) => (
-            <div key={i} className="relative w-3 h-12 sm:w-4 sm:h-16">
-              {!blown && <div className="flame" style={{ animationDelay: `${i * 0.1}s` }} />}
+            <div key={i} className="relative w-2.5 h-14 sm:w-3 sm:h-16">
+              {!blown && <div className="flame" style={{ animationDelay: `${i * 0.12}s` }} />}
               {blown && <div className="flame out" />}
-              <div className="absolute inset-0 rounded-sm bg-gradient-to-b from-accent via-blueberry-light to-blueberry" />
-              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-0.5 h-2 bg-foreground/60" />
+              {/* candle body — striped */}
+              <div
+                className="absolute inset-0 rounded-[3px] shadow-md"
+                style={{
+                  background:
+                    "repeating-linear-gradient(180deg, hsl(var(--accent)) 0 6px, hsl(var(--blueberry-light)) 6px 12px)",
+                }}
+              />
+              {/* wick */}
+              <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-[2px] h-2 bg-foreground/70" />
+              {/* wax drip */}
+              <div className="absolute top-2 left-0 w-1 h-3 rounded-full bg-accent/70" />
             </div>
           ))}
         </div>
 
-        {/* Cake tiers */}
-        <div className="relative">
-          <div className="w-64 sm:w-80 h-12 bg-gradient-cake rounded-t-3xl border-2 border-blueberry-light/40 shadow-soft" />
-          <div className="w-72 sm:w-96 -mt-1 h-16 bg-gradient-cake rounded-2xl border-2 border-blueberry-light/40 shadow-soft mx-auto flex items-center justify-around px-4">
-            {Array.from({ length: 6 }).map((_, i) => (
-              <span key={i} className="text-lg">💙</span>
-            ))}
+        {/* Cake tiers — stacked widest at bottom */}
+        <div className="relative flex flex-col items-center">
+          {/* Top tier */}
+          <div className="relative w-44 sm:w-52 z-10">
+            <div className="h-14 bg-gradient-cake rounded-t-[40%] rounded-b-md border-2 border-blueberry-light/50 shadow-soft relative overflow-hidden">
+              {/* frosting drip */}
+              <svg viewBox="0 0 200 30" preserveAspectRatio="none" className="absolute -bottom-[1px] left-0 w-full h-5">
+                <path d="M0 0 Q10 25 20 5 Q30 28 40 6 Q50 26 60 4 Q70 27 80 6 Q90 25 100 4 Q110 28 120 6 Q130 25 140 5 Q150 28 160 6 Q170 25 180 4 Q190 27 200 5 L200 30 L0 30 Z" fill="hsl(var(--blueberry-light))" />
+              </svg>
+            </div>
           </div>
-          <div className="w-80 sm:w-[28rem] -mt-1 h-20 bg-gradient-blueberry rounded-2xl border-2 border-blueberry-light/40 shadow-soft mx-auto flex items-center justify-center">
-            <span className="font-[Pacifico] text-2xl text-primary-foreground">Happy 22, Blueberry</span>
+
+          {/* Middle tier */}
+          <div className="relative w-64 sm:w-72 -mt-2 z-[5]">
+            <div className="h-16 bg-gradient-cake rounded-md border-2 border-blueberry-light/50 shadow-soft relative overflow-hidden">
+              <div className="absolute inset-x-0 top-2 flex justify-around px-3">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span key={i} className="text-base">💙</span>
+                ))}
+              </div>
+              <svg viewBox="0 0 200 30" preserveAspectRatio="none" className="absolute -bottom-[1px] left-0 w-full h-6">
+                <path d="M0 0 Q10 28 20 4 Q30 26 40 5 Q50 28 60 6 Q70 25 80 4 Q90 28 100 5 Q110 26 120 6 Q130 28 140 4 Q150 25 160 5 Q170 28 180 6 Q190 25 200 4 L200 30 L0 30 Z" fill="hsl(var(--blueberry))" />
+              </svg>
+            </div>
+          </div>
+
+          {/* Bottom tier */}
+          <div className="relative w-80 sm:w-96 -mt-2">
+            <div className="h-20 bg-gradient-blueberry rounded-md border-2 border-blueberry-light/50 shadow-soft flex items-center justify-center">
+              <span className="font-[Pacifico] text-xl sm:text-2xl text-primary-foreground drop-shadow">
+                Happy 22, Blueberry
+              </span>
+            </div>
+            {/* plate */}
+            <div className="mx-auto -mt-1 w-[22rem] sm:w-[26rem] h-3 rounded-full bg-foreground/10 blur-[1px]" />
+            <div className="mx-auto -mt-2 w-[20rem] sm:w-[24rem] h-2 rounded-full bg-foreground/20" />
           </div>
         </div>
       </div>
