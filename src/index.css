@@ -2,95 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Blueberry birthday theme — deep night blue → bright sky */
+    --background: 222 60% 7%;
+    --foreground: 200 100% 96%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 50% 11%;
+    --card-foreground: 200 100% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 55% 9%;
+    --popover-foreground: 200 100% 96%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 100% 60%;
+    --primary-foreground: 222 60% 7%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 220 70% 25%;
+    --secondary-foreground: 200 100% 96%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 222 40% 18%;
+    --muted-foreground: 210 40% 75%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 195 100% 65%;
+    --accent-foreground: 222 60% 7%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 50% 22%;
+    --input: 220 50% 22%;
+    --ring: 210 100% 60%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom blueberry tokens */
+    --blueberry: 230 70% 35%;
+    --blueberry-light: 210 100% 70%;
+    --blueberry-glow: 195 100% 60%;
+    --candle-flame: 35 100% 65%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --gradient-night: linear-gradient(180deg, hsl(222 70% 5%), hsl(225 65% 12%) 50%, hsl(220 60% 18%));
+    --gradient-blueberry: linear-gradient(135deg, hsl(230 80% 45%), hsl(200 100% 60%));
+    --gradient-cake: linear-gradient(180deg, hsl(210 100% 75%), hsl(220 80% 50%));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(200 100% 70% / 0.4), transparent 70%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    --shadow-glow: 0 0 60px hsl(var(--blueberry-glow) / 0.5);
+    --shadow-soft: 0 20px 60px -20px hsl(220 80% 10% / 0.8);
+    --shadow-candle: 0 0 30px hsl(var(--candle-flame) / 0.9), 0 0 60px hsl(var(--candle-flame) / 0.5);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* sidebar (unused but kept) */
+    --sidebar-background: 222 60% 7%;
+    --sidebar-foreground: 200 100% 96%;
+    --sidebar-primary: 210 100% 60%;
+    --sidebar-primary-foreground: 222 60% 7%;
+    --sidebar-accent: 222 40% 18%;
+    --sidebar-accent-foreground: 200 100% 96%;
+    --sidebar-border: 220 50% 22%;
+    --sidebar-ring: 210 100% 60%;
   }
 }
 
@@ -98,8 +68,132 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: var(--gradient-night);
+    min-height: 100vh;
+    font-family: 'Quicksand', system-ui, sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Pacifico', 'Quicksand', cursive;
   }
 }
+
+@layer utilities {
+  .text-gradient-blueberry {
+    background: var(--gradient-blueberry);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-gradient-blueberry { background: var(--gradient-blueberry); }
+  .bg-gradient-night { background: var(--gradient-night); }
+  .bg-gradient-cake { background: var(--gradient-cake); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-candle { box-shadow: var(--shadow-candle); }
+  .transition-smooth { transition: var(--transition-smooth); }
+
+  .glow-orb {
+    background: var(--gradient-glow);
+  }
+}
+
+@layer components {
+  /* Floating balloons */
+  .balloon {
+    position: absolute;
+    width: 50px;
+    height: 62px;
+    border-radius: 50% 50% 45% 45%;
+    animation: float-up 12s linear infinite;
+    opacity: 0.7;
+  }
+  .balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    width: 1px;
+    height: 40px;
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+
+  /* Confetti */
+  .confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 14px;
+    top: -20px;
+    animation: confetti-fall linear forwards;
+  }
+
+  /* Candle flame */
+  .flame {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 22px;
+    background: radial-gradient(circle at 50% 70%, hsl(var(--candle-flame)), hsl(20 100% 50%) 60%, transparent 75%);
+    border-radius: 50% 50% 30% 30%;
+    box-shadow: var(--shadow-candle);
+    animation: flicker 0.4s ease-in-out infinite alternate;
+    transform-origin: bottom center;
+  }
+  .flame.out {
+    animation: blow-out 0.6s ease-out forwards;
+  }
+}
+
+@keyframes float-up {
+  0% { transform: translateY(110vh) translateX(0) rotate(-2deg); }
+  100% { transform: translateY(-30vh) translateX(40px) rotate(4deg); }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1, 1) rotate(-2deg); }
+  100% { transform: translateX(-50%) scale(1.05, 1.1) rotate(2deg); }
+}
+
+@keyframes blow-out {
+  0% { opacity: 1; transform: translateX(-50%) scale(1); }
+  60% { opacity: 0.8; transform: translateX(-200%) scale(0.6) rotate(40deg); }
+  100% { opacity: 0; transform: translateX(-300%) scale(0) rotate(60deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 30px hsl(var(--blueberry-glow) / 0.5); }
+  50% { box-shadow: 0 0 80px hsl(var(--blueberry-glow) / 0.9); }
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-float-soft { animation: float-soft 4s ease-in-out infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.8s ease-out forwards; opacity: 0; }
+.animate-sparkle { animation: sparkle 2s ease-in-out infinite; }
