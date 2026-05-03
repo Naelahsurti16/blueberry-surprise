@@ -51,7 +51,7 @@ const Index = () => {
 
           <p className="mt-12 text-sm text-muted-foreground text-center max-w-md">
             ✨ Hint: Come back on <span className="text-accent">May 13th</span> for your real surprise.
-            No peeking, Chotu.
+            No peeking, Babbu.
           </p>
         </section>
       ) : (
