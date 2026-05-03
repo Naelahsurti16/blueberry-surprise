@@ -43,7 +43,7 @@ export const Riddles = () => {
           >
             <div className="flex items-center justify-between mb-3">
               <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                Riddle #{i + 1}
+                Riddle {i + 1}
               </span>
               {isSolved ? (
                 <SparkIcon className="w-4 h-4 text-accent" />
