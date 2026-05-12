@@ -2,13 +2,28 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 
 const REASONS = [
-  "Your laugh is my favorite sound in the universe.",
-  "You're short but you carry my whole world 💙",
-  "The way you say my name softens every bad day.",
-  "You make ordinary moments feel like a movie scene.",
-  "Your hugs feel like home — warm, safe, forever.",
-  "You believe in me even when I don't believe in myself.",
-  "You're stubborn, silly, and impossibly mine. ✨",
+  "the way you make me smile without even trying",
+  "how safe and comfortable I feel with you",
+  "your laugh and the random gossip you give me that keeps me entertained all day 😭",
+  "the random things you talk about that somehow always make me happy",
+  "how patient you are with me",
+  "because you always try your best",
+  "the way you care even in small ways",
+  "because even when you don't listen properly, you still somehow make everything better 😭",
+  "how you make my boring days better",
+  "because life feels lighter with you in it",
+  "the way you make me feel loved",
+  "how you stay with me even when I'm difficult",
+  "your voice literally calms me down",
+  "because you make me laugh at the dumbest things",
+  "the way you randomly tell me stories and gossip like I'm your best friend 😭",
+  "because talking to you is my favorite part of the day",
+  "how supportive you are of me",
+  "because you're genuinely such a beautiful person",
+  "the way you make ordinary moments special",
+  "because you're my comfort person",
+  "because being with you feels like home",
+  "and lastly… because you're simply you, and that's my favorite thing ever 🤍",
 ];
 
 export const Reasons = () => {
