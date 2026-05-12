@@ -11,9 +11,17 @@ import { Lock, Heart } from "lucide-react";
 const Index = () => {
   const { isUnlocked, days } = useCountdown();
   const [candlesBlown, setCandlesBlown] = useState(false);
+  const [loadingDone, setLoadingDone] = useState(false);
   // Dev preview: allow ?preview=1 to skip the lock
   const forceUnlock = typeof window !== "undefined" && new URLSearchParams(window.location.search).get("preview") === "1";
   const unlocked = isUnlocked || forceUnlock;
+
+  useEffect(() => {
+    if (unlocked && !loadingDone) {
+      const t = setTimeout(() => setLoadingDone(true), 2600);
+      return () => clearTimeout(t);
+    }
+  }, [unlocked, loadingDone]);
 
   return (
     <main className="relative min-h-screen overflow-x-hidden">
