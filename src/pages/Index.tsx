@@ -1,12 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useCountdown } from "@/hooks/useCountdown";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { Riddles } from "@/components/Riddles";
 import { Cake } from "@/components/Cake";
 import { LoveLetter } from "@/components/LoveLetter";
-import { VoiceMessage } from "@/components/VoiceMessage";
 import { Reasons } from "@/components/Reasons";
-import { SongPlayer } from "@/components/SongPlayer";
 import { Balloons, Confetti, Sparkles } from "@/components/FloatingDecor";
 import { Lock, Heart } from "lucide-react";
 
