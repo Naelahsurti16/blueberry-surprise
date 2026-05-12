@@ -24,23 +24,37 @@ export const LoveLetter = () => {
             To my Blueberry 💙
           </h3>
           <div className="space-y-4 text-foreground/95 leading-relaxed">
-            <p>My Chotu,</p>
+            <p>my babbu ❤️</p>
             <p>
-              22 looks ridiculously good on you. I built this whole little world just so I could
-              say the things that get stuck in my throat — that you're the best thing that
-              accidentally became the most on-purpose thing in my life.
+              happy birthday lovee, I wish you have the happiest day ever and that you keep
+              growing, smiling, and becoming the amazing person you are. I might not say this
+              every day, but you're honestly the best thing that accidentally became the most
+              beautiful part of my life.
             </p>
             <p>
-              You're short, sure, but you stand the tallest in every room of my heart. You make
-              boring Tuesdays feel like Saturdays. You make scary things feel doable. You make me
-              feel like the softest, safest version of myself.
+              you make my boring days feel lighter and happier just by existing. even the
+              smallest moments with you feel special to me. you always try your best in
+              everything you do, and I hope you know how proud I am of you for that.
             </p>
             <p>
-              Today is yours. Eat too much cake. Be loud. Be silly. Be 22. And know that no
-              matter how many candles we add to this cake, I'm picking you again and again.
+              i know I can be rude, annoying, or dramatic sometimes, but I love you a lot… like
+              a lot a lot 😭 (a lil more than ayesha fr, don't tell her).
+            </p>
+            <p>
+              thank you for being patient with me, for listening to me, for making me laugh when
+              I'm upset, and for being my comfort person without even trying.
+            </p>
+            <p>
+              today is YOUR day babbu, so eat a lot, smile a lot, be loud, be silly, annoy
+              everyone, and enjoy every second because you deserve all the happiness in the
+              world.
+            </p>
+            <p>
+              and no matter what happens, I'll always love you the most when you're simply
+              being yourself 🤍
             </p>
             <p className="font-[Pacifico] text-2xl text-accent text-right">
-              Forever yours 💙
+              happy birthday once again my loveee 🫶
             </p>
           </div>
         </Card>
