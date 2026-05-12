@@ -81,7 +81,7 @@ const Index = () => {
 
               <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
                 <h2 className="mb-6 px-4 pb-3 text-center font-[Pacifico] text-3xl leading-[1.5] text-gradient-blueberry">
-                  22 reasons (well, 7) why I love you
+                  22 reasons why I love you ❤️
                 </h2>
                 <Reasons />
               </div>
