@@ -63,8 +63,30 @@ const Index = () => {
             No peeking, Babbu.
           </p>
         </section>
+      ) : !loadingDone ? (
+        <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-16 text-center">
+          <Sparkles />
+          <div className="flex gap-2 mb-6">
+            <span className="w-3 h-3 rounded-full bg-blueberry-light animate-bounce" style={{ animationDelay: "0s" }} />
+            <span className="w-3 h-3 rounded-full bg-blueberry-light animate-bounce" style={{ animationDelay: "0.15s" }} />
+            <span className="w-3 h-3 rounded-full bg-blueberry-light animate-bounce" style={{ animationDelay: "0.3s" }} />
+          </div>
+          <p className="font-[Pacifico] text-2xl sm:text-4xl text-gradient-blueberry animate-pulse">
+            Loading your birthday surprise…
+          </p>
+        </section>
       ) : (
         <section className="relative z-10 px-4 py-16 space-y-20">
+          {/* Reveal banner */}
+          <div className="text-center max-w-2xl mx-auto animate-fade-in-up">
+            <h2 className="font-[Pacifico] text-4xl sm:text-6xl text-gradient-blueberry leading-[1.4] pb-2">
+              Congratulations 🎉
+            </h2>
+            <p className="mt-4 text-lg sm:text-xl text-muted-foreground">
+              You unlocked <span className="text-accent font-semibold">unlimited love</span> from me.
+            </p>
+          </div>
+
           {/* Hero + Cake */}
           <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/20 border border-accent/40 text-xs uppercase tracking-widest text-accent mb-6">
@@ -90,10 +112,6 @@ const Index = () => {
                   22 reasons why I love you ❤️
                 </h2>
                 <Reasons />
-              </div>
-
-              <div className="animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                <VoiceMessage />
               </div>
 
               <p className="text-center text-muted-foreground pt-10 pb-4">
