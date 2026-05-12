@@ -90,12 +90,8 @@ const Index = () => {
                 <VoiceMessage />
               </div>
 
-              <div className="animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                <SongPlayer />
-              </div>
-
               <p className="text-center text-muted-foreground pt-10 pb-4">
-                Made with 💙 for my baby, forever.
+                Made with 💙 for my baby.
               </p>
             </>
           )}
